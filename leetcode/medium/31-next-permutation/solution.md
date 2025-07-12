@@ -1,6 +1,6 @@
 # 31. Next Permutation
 
-**Link:** https://leetcode.com/problems/next-permutation/submissions/1695503905/
+**Link:** https://leetcode.com/problems/next-permutation/submissions/1695505961/
 
 A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
 
@@ -15,7 +15,7 @@ public:
             if(nums[i+1]>nums[i])
             {
         }
-        
+        // next_permutation(nums.begin(),nums.end());
             }
                 t=i;break;
         if(t==-1)
@@ -33,12 +33,3 @@ public:
             sort(nums.begin()+t+1,nums.end());
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Loop Logic, Conditional Logic
-
-1. **Key Issues**: Attempts 1-4 had incomplete or incorrect loops and conditional logic for finding the pivot point for the permutation. Attempts 5-19 had syntax errors (missing semicolons, incorrect `if` statements, dangling `else`) and logical errors in finding and swapping elements. Attempt 20-21 had correct logic but missed handling of the case where the input array is sorted in descending order.
-
-2. **Evolution**: The attempts progressively moved towards the correct algorithm for finding the next permutation.  However, syntax and logical errors in implementing the `upper_bound` and swapping mechanism hindered progress until the final attempt which correctly identifies the pivot and swaps elements before sorting the remaining sub-array.
-
