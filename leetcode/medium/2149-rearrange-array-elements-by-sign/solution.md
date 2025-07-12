@@ -1,6 +1,6 @@
 # 2149. Rearrange Array Elements by Sign
 
-**Link:** https://leetcode.com/problems/rearrange-array-elements-by-sign/submissions/1695301866/
+**Link:** https://leetcode.com/problems/rearrange-array-elements-by-sign/submissions/1695302040/
 
 You are given a 0-indexed integer array nums of even length consisting of an equal number of positive and negative integers. You should return the array of nums such that the the array follows the given conditions: Every consecutive pair of integers have opposite signs. For all integers with the same sign, the order in which they were present in nums is preserved. The rearranged array begins with a positive integer. Return the modified array after rearranging the elements to satisfy the aforementioned conditions.
 
@@ -39,12 +39,3 @@ public:
         return ans;
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Syntax Error, Loop Logic, Conditional Logic
-
-1. **Key Issues**: Attempts 1-7 had syntax errors (`nums.szie`, `int[] arr[n]`, missing semicolons, `arr` instead of `ans`).  Attempt 8-11 had logic errors in incrementing `o` and `e` and handling the conditional logic within the loop. Attempt 12 corrected the `o` increment but still had a missing `e+=2` increment
-
-2. **Evolution**: The code gradually corrected syntax errors.  Loop logic and conditional logic were improved in the final attempt but were still flawed initially.  The use of a vector was a step towards a correct solution.
-
