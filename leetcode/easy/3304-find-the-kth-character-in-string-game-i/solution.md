@@ -1,6 +1,6 @@
 # 3304. Find the K-th Character in String Game I
 
-**Link:** https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/submissions/1696205975/
+**Link:** https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/description/
 
 Alice and Bob are playing a game. Initially, Alice has a string word = "a". You are given a positive integer k. Now Bob will ask Alice to perform the following operation forever: Generate a new string by changing each character in word to its next character in the English alphabet, and append it to the original word.
 
@@ -34,12 +34,3 @@ class Solution {
     }
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Conditional Logic, Algorithm Choice
-
-1. **Key Issues**: The `shift` function is recursively defined but never correctly utilized within `kthCharacter`.  Attempts incorrectly calculate the character shift based on flawed logic for handling the recursive steps and string generation.  The algorithm fundamentally misunderstands the problem's pattern.
-
-2. **Evolution**: Attempts iteratively tried to fix the recursive calls and conditional logic within `shift` and `kthCharacter`, but without a correct understanding of the pattern of string growth, they failed to produce a working solution.  The commented-out code hints at a more appropriate approach (iterative string building), which was never fully implemented.
-
