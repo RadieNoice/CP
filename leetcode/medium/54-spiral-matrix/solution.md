@@ -1,6 +1,6 @@
 # 54. Spiral Matrix
 
-**Link:** https://leetcode.com/problems/spiral-matrix/submissions/1697384785/
+**Link:** https://leetcode.com/problems/spiral-matrix/submissions/1697384621/
 
 Given an m x n matrix, return all elements of the matrix in spiral order.
 
@@ -32,3 +32,12 @@ public:
             }
 };
 ```
+
+## Mistake Analysis
+
+TAGS: Logic Error, Loop Logic, Array Bounds
+
+1. **Key Issues**: Attempts 1-5 had incomplete function definitions and incorrect pointer usage. Attempts 6-14 had logic errors in boundary conditions and loop termination within the spiral traversal. Attempts 15-22 correctly implemented the algorithm but initially had off-by-one errors and conditional logic issues.
+
+2. **Evolution**: The code evolved from a flawed, incomplete approach using pointers towards a layer-by-layer traversal.  Successful attempts involved fixing off-by-one errors in loop counters and conditions to correctly handle all boundary cases.
+
