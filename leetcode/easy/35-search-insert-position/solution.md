@@ -1,6 +1,6 @@
 # 35. Search Insert Position
 
-**Link:** https://leetcode.com/problems/search-insert-position/description/
+**Link:** https://leetcode.com/problems/search-insert-position/submissions/1713528946/
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
 
@@ -23,12 +23,3 @@ public:
        return m;
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Loop Logic, Conditional Logic
-
-1. **Key Issues**: Attempt 1 and 2 are nearly identical and incomplete.  The `else if` condition is dangling and lacks a closing brace for the `while` loop. The binary search logic is flawed; `n` should be updated to `a` in some cases.  The final return value `m` isn't always correct if the target is not found.
-
-2. **Evolution**: No actual evolution occurred between attempts; they're the same incomplete code.
-
