@@ -1,6 +1,6 @@
 # 56. Merge Intervals
 
-**Link:** https://leetcode.com/problems/merge-intervals/submissions/1719746849/
+**Link:** https://leetcode.com/problems/merge-intervals/submissions/1719747098/
 
 Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
 
@@ -27,12 +27,3 @@ public:
         ans.push_back({x,y});
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Loop Logic, Conditional Logic
-
-1. **Key Issues**:  Attempts 1-11 had unclosed loops and incorrect conditional logic for merging intervals. `ans` was undeclared. Attempt 12's loop iterates one time too many and has incorrect logic for merging intervals.  The core logic for merging was missing.
-
-2. **Evolution**: Attempts incrementally added code, mostly unsuccessfully correcting syntax and attempting to implement the merge logic.  Attempt 12 is the first to approach a complete loop. However, the conditionals and logic for interval merging is still faulty.
-
