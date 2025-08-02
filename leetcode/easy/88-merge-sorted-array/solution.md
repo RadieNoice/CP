@@ -1,6 +1,6 @@
 # 88. Merge Sorted Array
 
-**Link:** https://leetcode.com/problems/merge-sorted-array/submissions/1720380665/
+**Link:** https://leetcode.com/problems/merge-sorted-array/description/
 
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order. The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
@@ -30,12 +30,3 @@ public:
            i++;
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Algorithm Choice, Loop Logic
-
-1. **Key Issues**: Attempts 1-17 incorrectly used `nums1.insert()`,  increasing vector size and causing index issues.  Attempts 18-53 used `lower_bound` but had logic errors in handling insertion and the loop termination condition.  The correct approach is to merge from the end of `nums1` efficiently.
-
-2. **Evolution**: Initial attempts tried inefficient insertions. Later attempts used `lower_bound` for a better approach, although they still had flawed loop control and insertion logic.  The attempts progressively tried fixing the insertion issues.
-
