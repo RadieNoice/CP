@@ -10,10 +10,10 @@ public:
     int areaOfMaxDiagonal(vector<vector<int>>& num) {
         int  area;
         double diag=-1;
-        for(auto& i:num)
+        for(autoi:num)
         {
             double x=sqrt(i[0]*i[0]+i[1]*i[1]);
-            cout <<x<<" "<<i[0]<<" "<<i[1]<<endl;
+            //cout <<x<<" "<<i[0]<<" "<<i[1]<<endl;
             if(diag<x)
             {
                 diag=x;area=i[0]*i[1];
