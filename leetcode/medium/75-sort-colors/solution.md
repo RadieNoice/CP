@@ -1,6 +1,6 @@
 # 75. Sort Colors
 
-**Link:** https://leetcode.com/problems/sort-colors/submissions/1761230017/
+**Link:** https://leetcode.com/problems/sort-colors/submissions/1761230109/
 
 Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue. We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively. You must solve this problem without using the library's sort function.
 
@@ -35,12 +35,3 @@ Given an array nums with n objects colored red, white, or blue, sort them in-pla
     //         else
     //             j++;
 ```
-
-## Mistake Analysis
-
-TAGS: Logic Error, Loop Logic, Conditional Logic
-
-1. **Key Issues**: Attempts 1-4 suffer from incomplete or incorrect implementation of the Dutch National Flag algorithm.  Conditional logic within the `while` loop is flawed, leading to incorrect swapping and incomplete sorting.  Increment/decrement of `i`, `j`, `k` are improperly handled.
-
-2. **Evolution**:  The attempts show a progression towards the correct algorithm, but the logic within the loop consistently fails to correctly handle all three color cases simultaneously.  The code remains incomplete and buggy throughout all attempts.
-
