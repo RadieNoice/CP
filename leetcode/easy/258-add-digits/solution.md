@@ -1,6 +1,6 @@
 # 258. Add Digits
 
-**Link:** https://leetcode.com/problems/add-digits/
+**Link:** https://leetcode.com/problems/add-digits/submissions/1767014669/
 
 Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
 
@@ -30,9 +30,9 @@ public:
 
 ## Mistake Analysis
 
-TAGS: Logic Error, Loop Logic
+TAGS: Logic Error, Loop Logic, Conditional Logic
 
-1. **Key Issues**: All attempts suffer from fundamental logic errors in the loop structures and conditional statements for handling multi-digit sums.  Incorrect loop termination conditions and missing updates to `num` and `x` prevent proper iterative summing.
+1. **Key Issues**: All attempts suffered from improper loop control and conditional logic.  The `do-while` loops were incorrectly structured and didn't update `x` properly. The intended logic to repeatedly sum digits until a single digit remained was not implemented correctly.  The final `if` statements were useless.
 
-2. **Evolution**: Attempts gradually improved the while loop condition, moving closer to correctly accumulating digits.  However, none successfully implemented the iterative digit-summing and single-digit check required by the problem.  The `do-while` loop was consistently misused.
+2. **Evolution**: Attempts gradually corrected the `while` loop condition for summing digits.  However, the core flaw in handling the iterative summation and conditional logic remained unresolved until the final attempts.  The final attempts are still flawed.
 
