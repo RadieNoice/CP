@@ -1,6 +1,6 @@
 # 15. 3Sum
 
-**Link:** https://leetcode.com/problems/3sum/submissions/1772127544/
+**Link:** https://leetcode.com/problems/3sum/submissions/
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set must not contain duplicate triplets.
 
@@ -34,12 +34,3 @@ public:
     }
 };
 ```
-
-## Mistake Analysis
-
-TAGS: Loop Logic, Conditional Logic, Edge Cases
-
-1. **Key Issues**: Attempts 1-7 had incorrect `while` loop conditions for duplicate handling of `r`, sometimes decrementing `r` when it should be incremented. Attempts 8-11 corrected this. Attempt 10 and 11 unnecessarily omitted `i++` in the `while` loop for `i`.
-
-2. **Evolution**: The code evolved to correctly handle duplicate numbers and improve efficiency by moving `i++` outside the inner `while` loop.  The final attempts correctly skip duplicates and use a `for` loop instead of `while`.
-
