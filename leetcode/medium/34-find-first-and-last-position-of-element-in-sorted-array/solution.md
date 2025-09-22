@@ -1,43 +1,49 @@
 # 34. Find First and Last Position of Element in Sorted Array
 
-**Link:** https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/1778554545/
+**Link:** https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If target is not found in the array, return [-1, -1]. You must write an algorithm with O(log n) runtime complexity.
 
 ```cpp
-    vector<int> searchRange(vector<int>& nums, int target) {
-        int l=0,r=nums.size()-1,m,s=-1,e=-1;
+        // if(nums[l]==target&&nums[r]==target)
+        // return vector<int>{l,r};
         while(l<=r)
         {
             m=(l+r)/2;
-        }
-            if(nums[m]==target)
-            {
-    }
-                while(i>=0&&nums[i]==target)
-                i--;
-                while(i<=nums.size()-1&&nums[i]==target)
-                i++;
-                e=i-1;
-                int i=m;
-                i=m;
-                s=i+1;
-            }
-            if(nums[m]<=target)
+            if(nums[m]<target)
+            s=m;
+            if(nums[m]<target)
             l=m+1;
             else
             r=m-1;        
+        }
+        l=0;r=nums.size()-1;
+        while(l<=r)
+        {
+            m=(l+r)/2;
+            if(nums[m]>target)
+            e=m;
+            if(nums[m]<=target)
+            l=m+1;
+            else
+            r=m-1;
+        }
+        if(s!=-1&&e!=-1){
+        s++;e--;
+        }
+
         return vector<int>{s,e};
-                break;
+        int l=0,r=nums.size()-1,m,s=-1,e=-1;
+    vector<int> searchRange(vector<int>& nums, int target) {
 public:
 class Solution {
 ```
 
 ## Mistake Analysis
 
-TAGS: Logic Error, Loop Logic, Array Bounds
+TAGS: Logic Error, Loop Logic, Conditional Logic
 
-1. **Key Issues**: Attempt 1 and 2 both have a flawed binary search.  The `while` loop inside the `if` statement is incorrect; it doesn't find the start/end indices.  Index `i` is not properly initialized or used to track the boundaries.  There are also off-by-one errors in the loop conditions and index calculations.  The `break` statement is misplaced.
+1. **Key Issues**: Attempts 1-4 suffer from incorrect conditional logic within binary search loops.  The `if` and `else if` conditions are improperly structured, leading to incorrect index updates. Attempt 5 uses two separate binary searches but lacks logic to handle finding the first and last occurrences correctly.
 
-2. **Evolution**: No significant improvement between attempts; both have the same fundamental flaws in finding the start and end indices.  Neither attempt correctly implements the binary search to find the range.
+2. **Evolution**:  Attempts show a gradual refinement of the binary search logic, but the core conditional error persists until the final attempt, which is still unfinished and lacks the necessary post-processing to return the correct range.
 
